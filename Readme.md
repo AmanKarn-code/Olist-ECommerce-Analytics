@@ -1,4 +1,3 @@
-```markdown
 # 🛒 Enterprise E-commerce Analytics & SLA Compliance Dashboard
 **Tech Stack:** Power BI | MySQL | Python (Pandas & SQLAlchemy) | DAX  
 **Dataset:** Brazilian E-Commerce Public Dataset by Olist (100k+ Transactions)  
@@ -46,49 +45,6 @@ The transactional data is structured into a central Fact table surrounded by nor
 
 ---
 
-## ⚙️ How to Handle GitHub File Size Limits (100 MB Restriction)
-
-GitHub imposes a strict **100 MB per file limit** and a **1 GB repository size recommendation**. Large files like raw CSV datasets or full `.pbix` binaries can trigger push errors. Follow these steps to handle file sizes cleanly:
-
-### Option A: Exclude Heavy Datasets Using `.gitignore` (Recommended)
-Since recruiters and hiring managers evaluate code, SQL queries, DAX logic, and UI execution rather than raw CSV copies, exclude heavy data files from your push:
-
-1. Create a file named `.gitignore` in your repository root.
-2. Add the following rules:
-
-```text
-# Exclude raw data files and folders
-data/
-*.csv
-*.zip
-
-# Exclude temporary Power BI workspace caches
-*.pbi/
-*.tmp
-
-```
-
-### Option B: Use Git Large File Storage (Git LFS)
-
-If you wish to upload your raw CSVs or a `.pbix` file larger than 100 MB, enable Git LFS:
-
-```bash
-# Install and initialize Git LFS
-git lfs install
-
-# Track heavy CSVs and Power BI binary files
-git lfs track "*.csv"
-git lfs track "*.pbix"
-
-# Commit the .gitattributes file before pushing
-git add .gitattributes
-git commit -m "Configure Git LFS for heavy dataset files"
-
-```
-
----
-
-## 📂 Repository Directory Structure
 
 ```text
 Olist-ECommerce-Analytics/
